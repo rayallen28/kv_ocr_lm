@@ -1,0 +1,8 @@
+kv_ocr_lm means extracting key-value pares from OCR results using language model, with one-shot method as additional inputs.
+this project using paddleocr as ocr engine, using bert base multilingual as language model.
+main process:
+1. get all text blocks from ocr.
+2. take wanted keys and one-shot examples for each keys.
+3. loop all text blocks to find keys.
+4. for each key, find all close text blocks close to key.
+5. take each key-block for all blocks near key, using text classification task from bert model, find best matched pairs as final result.
